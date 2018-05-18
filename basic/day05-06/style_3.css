@@ -1,0 +1,18 @@
+.import {
+    font-weight: bold;
+}
+
+h1 {
+    float: top;
+    color: #FFFFFF;
+    background-color: #5B5B5B;
+}
+
+h2 {
+    float: left;
+    background-color: #D0D0D0;
+}
+
+.describle {
+    float: right;
+}
