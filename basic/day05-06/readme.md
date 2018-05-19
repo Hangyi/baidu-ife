@@ -1,4 +1,8 @@
-## 学习时间
+## 预览地址
+
+[三种简历](https://hangyi.github.io/baidu-ife/basic/day05-06/resume.html)
+
+学习时间
 
 - 8hours
 

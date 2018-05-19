@@ -1,0 +1,89 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Microsoft YaHei", SimHei, "微软雅黑";
+  font-size: 1.6rem;
+  text-indent: 0.5em;
+}
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  color: #83ABDF;
+  font-style: italic;
+  font-weight: normal;
+}
+
+#telephone{
+  font-weight: bold;
+}
+
+.import{
+  font-weight: bold;
+}
+
+[class=underline]{
+  text-decoration: underline;
+}
+
+[class^=right]{
+  text-align: right;
+}
+
+.project{
+  text-height: 2px;
+}
+
+[class=project]{
+  line-height: 1.5;
+  
+}
+
+#name{
+  color: black;
+  text-shadow: -1px -1px 1px #aaa,
+               0px 4px 1px rgba(0,0,0,0.5),
+               4px 4px 5px rgba(0,0,0,0.7),
+               0px 0px 7px rgba(0,0,0,0.4); 
+}
+
+h1 {
+  background-color: yellow;
+  background-image: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
+  background-repeat: no-repeat;
+  background-position: 99% center;
+  border-style: dashed;
+  border-color: red;
+  border-width: 15px 5px 15px 5px;
+}
+
+#name {
+  background: green;
+  border-style: solid;
+  border-color: yellow;
+  border-style: solid;
+}
+
+ul {
+  list-style-type: square;
+  list-style-image: url(***.gif);
+  list-style-positon: inside;
+}
+
+a:link {
+  color:#FF0000;
+  text-decoration:none;
+}
+a:visited {
+  color:#00FF00;
+  text-decoration:none;
+}
+a:hover {
+  color:#FF00FF;
+  text-decoration:underline;
+}
+a:active {
+  color:#0000FF;
+  text-decoration:underline;
+}
