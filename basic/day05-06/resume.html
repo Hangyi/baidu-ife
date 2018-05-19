@@ -1,51 +1,143 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>简历</title>
-    <link rel="stylesheet" href="style_3.css"/>
+    <link rel="stylesheet" href="style_1.css"/>
+    <style>
+    #resume_selector {
+      width: 600px;
+      height: 60px;
+      margin: 0 auto 20px;
+    }
+    #resume_selector li {
+      list-style: none;
+      float: left;
+      width: 200px;
+    }
+    button::-moz-focus-inner {
+      border: none;
+    }
+    #resume_selector button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      width: 200px;
+    }
+    #resume_selector li + li button {
+      border-left: 2px solid #aaa;
+    }
+    #resume_selector button:hover {
+      background-color: #ef4136;
+    }
+  </style>
 </head>
 
 <body>
-    <div>
+    <div id="resume_selector">
+    <ul>
+      <li><button type="button">简历一</button></li>
+      <li><button type="button">简历二</button></li>
+      <li><button type="button">简历三</button></li>
+    </ul>
+    </div>
+ <div id="main_wrapper" class="clearfix">
+    <div id="firstcolwrap">
+      <section>
         <h1>简历</h1>
+      </section>
     </div>
-
-    <div>
+    <div id="secondcolwrap">
+      <section id="basic_information" class="clearfix">
         <h2>基本信息</h2>
-        <div class="describle">
-        <p><span class="import">姓名</span>张三 <span class="import">性别</span> 男 <span class="import">应聘职位</span> Web前端工程师</p>
-        </div>
-        
-       
+        <ul class='info'>
+          <li><span>姓名 </span> 张三</li>
+          <li><span>性别 </span> 男</li>
+          <li><span>应聘职位 </span> Web前端工程师</li>
+        </ul>
+      </section>
+      <section id="contact_information" class="clearfix">
         <h2>联系方式</h2>
-        <div class="describle">
-        <p><span class="import">手机</span> 12312341234 <span class="import">Email</span> <a href=joinefe@baidu.com>joinefe@baidu.com</a> 个人主页 <a href=github>Github</a></p>
-        </div>
-
+        <ul class='info'>
+          <li><span>手机 </span> 12312341234</li>
+          <li><span>Email </span> <a href="mailto:joinife@baidu.com" target="_blank">joinife@baidu.com</a></li>
+          <li><span>个人主页 </span><a href="https://github.com/zhangsan">Github</a></li>
+        </ul>
+      </section>
+      <section id="skill" class="clearfix">
         <h2>能力描述</h2>
-        <div class="describle">
-            <h3 class="import">技术能力</h3>
-            <p>熟练掌握HTML,CSS,JavaScript</p>
-            <h3 class="import">综合能力</h3>
-            <p>良好的沟通，主动积极，努力勤奋</p>
+        <div class="skill_wrap">
+          <article >
+            <div class="inner clearfix">
+              <h3>技术能力</h3>
+              <p>熟练掌握HTML, CSS, JavaScript</p>
+            </div>
+          </article>
+          <article>
+            <div class="inner">
+              <h3>综合能力</h3>
+              <p>良好的沟通，主动积极，努力勤奋</p>
+            </div>
+          </article>
         </div>
-        
-
+      </section>
+      <section id="education" class="clearfix">
         <h2>教育经历</h2>
-        <div class="describle">
-            <h3 class="import">本科</h3>
-            <p>百度前端技术学院小薇学院</p>
-            <h3 class="import">研究生</h3>
-            <p>百度技术学院大斌学院</p>
+        <div class="education_wrap">
+          <article>
+            <div class="inner clearfix">
+              <h3>本科</h3>
+              <p>百度前端技术学院小薇学院</p>
+            </div>
+          </article>
+          <article>
+            <div class="inner">
+              <h3>研究生</h3>
+              <p>百度前端学院大斌学院</p>
+            </div>
+          </article>
         </div>
-        
-
+      </section>
+      <section id="project" class="clearfix">
         <h2>项目经历</h2>
-        <div class="describle">
-            <h3 class="import">小度小度</h3>
-            <p>作为前端工程师角色参与了ABC组件的开发</p>
-            <h3 class="import">SAN Doc</h3>
-            <p>作为文档工程师参与了SAN Doc编写</p>
+        <div class="project_wrap">
+          <article>
+            <div class="inner clearfix">
+              <h3>小度小度</h3>
+              <p>作为前端工程师参与了ABC组件的开发</p>
+            </div>
+          </article>
+          <article>
+            <div class="inner">
+              <h3>SAN Doc</h3>
+              <p>作为文档工程师参与了SAN Doc编写</p>
+            </div>
+          </article>
         </div>
-     
+      </section>
     </div>
+  </div>
 </body>
+<script>
+  cssLink = document.querySelector('link'); //通过选择器获取文档元素
+  btns = document.querySelectorAll('button');
+  for(var i =0;i<btns.length;i++) {
+    addHandler(btns[i],i);
+  }
+  function addHandler(btn, i) {
+    var file_name="style_"+(i+1)+".css";
+    btn.addEventListener("click",function(event){
+      cssLink.href=file_name;
+    });
+  }
+</script>
+</html>
+
+
+
+
+
